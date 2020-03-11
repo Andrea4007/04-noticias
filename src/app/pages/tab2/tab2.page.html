@@ -5,14 +5,8 @@
     </ion-title>
   </ion-toolbar>
   <ion-segment scrollable mode="md" color="primary">
-  <ion-segment-button mode="md" value="option">
-  <ion-label text-capitalize>Noticias al día</ion-label>
-  </ion-segment-button>
-    <ion-segment-button mode="md" value="option">
-  <ion-label text-capitalize>Noticias al día</ion-label>
-  </ion-segment-button>
-    <ion-segment-button mode="md" value="option">
-  <ion-label text-capitalize>Noticias al día</ion-label>
+  <ion-segment-button *ngFor="let category of categorias" mode="md" [value]="category">
+  <ion-label text-capitalize>{{ category }}</ion-label>
   </ion-segment-button>
   </ion-segment>
 </ion-header>
